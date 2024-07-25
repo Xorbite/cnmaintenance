@@ -1,0 +1,22 @@
+{
+  "name": "cnmaintenance",
+  "version": "1.0.0",
+  "description": "The maintenance site for Centurion Network",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Xorbite/cnmaintenance.git"
+  },
+  "author": "Estel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Xorbite/cnmaintenance/issues"
+  },
+  "homepage": "https://github.com/Xorbite/cnmaintenance#readme",
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.6.0"
+  }
+}

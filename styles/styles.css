@@ -1,0 +1,211 @@
+@font-face {
+    font-family: 'Aurek-Besh';
+    src: local('Aurek-Besh'), url('../fonts/Aurek-Besh.ttf') format('truetype');
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    background: rgba(255, 255, 255, .1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .4);
+    margin-top: 2rem;
+    width: 80%;
+    border-radius: 50px;
+    padding: 0.2rem 2rem;
+}
+
+.navbar-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    color: white;
+    font-size: 1.2em;
+    font-family: Rubik One;
+}
+
+.logo {
+    font-size: 1.5em;
+    height: 64px;
+    width: 64px;
+    color: white;
+    font-family: 'Aurek-Besh', sans-serif;
+}
+
+.logo:hover {
+    scale: 1.1;
+    transition: all 0.3s ease;
+}
+
+.logo:not(hover){
+    transition: all 0.3s ease;
+}
+
+.main-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 1s ease-in-out; /* Add transition for background change */
+}
+
+.background-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: opacity 1s ease-in-out;
+    z-index: -1;
+}
+
+.background-layer.fade-out {
+    opacity: 0;
+}
+
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 2;
+}
+
+.object {
+    position: absolute;
+    right: -1000px;
+    bottom: 5%;
+    width: 65rem;
+    transition: right 1s ease-in-out;
+    z-index: 3;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+/* 
+.grid-shape {
+    background:repeating-linear-gradient(90deg, #FFFFFF 0, #FFFFFF 5%, transparent 0, transparent 50%) 0% 0% / 3em 3em, repeating-linear-gradient(180deg, #FFFFFF 0, #FFFFFF 5%, transparent 0, transparent 50%) 0% 0% / 3em 3em #FFFFFF;
+    opacity:0.4;
+    background-size: 58px 58px;
+    z-index: 10;
+} */
+
+.slide-in {
+    right: 8%;
+    transform: translateX(8%);
+}
+
+.slide-out {
+    right: -1300px;
+}
+
+.content {
+    text-align: left;
+    color: white;
+    margin-left: 10%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+}
+
+.title-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 4em;
+    font-family: 'Rubik Glitch', sans-serif;
+    -webkit-text-stroke: 0.5px white;
+    -webkit-text-fill-color: transparent;
+    margin: 0 0 -1rem 0;
+}
+
+.title-section-2 {
+    font-family: 'Rubik Glitch', sans-serif;
+    font-size: 6em;
+    color: #ff0000;
+    margin: 0;
+}
+
+.description {
+    font-size: 1.1em;
+    margin: 1rem 0 0 0;
+    font-family: "Rubik One", sans-serif;
+}
+
+.discord-button {
+    background-color: #ff0000;
+    border: none;
+    padding: 15px 25px;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 2rem;
+    font-family: "Rubik One", sans-serif;
+    border-radius: 10px;
+}
+
+
+.background-enter {
+    animation: backgroundEnter 1s forwards;
+}
+
+.background-exit {
+    animation: backgroundExit 1s forwards;
+}
+
+@keyframes backgroundEnter {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes backgroundExit {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
