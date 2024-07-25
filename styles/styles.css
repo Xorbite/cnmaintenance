@@ -108,7 +108,7 @@ nav {
 .object {
     position: absolute;
     right: -1000px;
-    bottom: 14%;
+    bottom: 18%;
     width: 65rem;
     transition: right 1s ease-in-out;
     z-index: 3;
@@ -126,7 +126,7 @@ nav {
     position: absolute;
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% ;
     background: #b6080b;
-    bottom: 12%;
+    bottom: 16%;
     z-index: 2;
 }
 
@@ -361,7 +361,7 @@ footer {
     }
 
     .content {
-        margin: 10rem 2rem;
+        margin: 14rem 2rem;
         justify-content: center;
         align-items: center;
     }
@@ -405,13 +405,13 @@ footer {
 
     .object {
         width: 20rem;
-        bottom: 20%;
+        bottom: 26%;
 
     }
     .object-shape {
         width: 16rem;
         height: 12rem;
-        bottom: 18%;
+        bottom: 24%;
     }
 
     .footer-content {
