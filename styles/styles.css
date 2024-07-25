@@ -183,6 +183,15 @@ nav {
     border-radius: 10px;
 }
 
+.discord-button:hover {
+    background-color: #a80000;
+    scale: 1.1;
+    transition: all 0.3s ease;
+}
+
+.discord-button:not(hover){
+    transition: all 0.3s ease;
+}
 
 .background-enter {
     animation: backgroundEnter 1s forwards;

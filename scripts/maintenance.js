@@ -17,9 +17,6 @@ typewriter
     .pauseFor(2500)
     .deleteChars(20)
     .typeString('Maintenance')
-    .pauseFor(2500)
-    .deleteChars(20)
-    .typeString('....')
     .pauseFor(3000)
     .start();
 
