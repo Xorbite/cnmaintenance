@@ -21,16 +21,26 @@ typewriter
     .start();
 
 
+
+
 function changeBackground() {
     const object = document.getElementById('object');
+    const object_shape = document.getElementById('object-shape');
+    const policecar = elements[1].object;
     const bg1 = document.getElementById('bg1');
     const bg2 = document.getElementById('bg2');
     
     const newBg = elements[currentIndex].bg;
 
+ 
+
     // Slide out the current object
     object.classList.remove('slide-in');
     object.classList.add('slide-out');
+    object_shape.classList.remove('slide-in');
+    object_shape.classList.add('slide-out');
+
+ 
 
     // Determine which background layer is currently visible and which to update
     const visibleLayer = currentBgLayer === 1 ? bg1 : bg2;
@@ -49,10 +59,20 @@ function changeBackground() {
         object.classList.remove('slide-out');
         object.classList.add('slide-in');
 
+        if (currentIndex === 1) { // Check if the current object is the police car
+            object.classList.add('size-pd-car');
+        } else {
+            object.classList.remove('size-pd-car');
+        }
+
+        object_shape.classList.remove('slide-out');
+        object_shape.classList.add('slide-in');
+
         // Swap the current background layer
         currentBgLayer = currentBgLayer === 1 ? 2 : 1;
 
         currentIndex = (currentIndex + 1) % elements.length;
+        
     }, 1000); // Match the transition duration
 }
 

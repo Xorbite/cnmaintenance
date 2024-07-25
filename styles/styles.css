@@ -43,7 +43,8 @@ nav {
     align-items: center;
     color: white;
     font-size: 1.2em;
-    font-family: Rubik One;
+    font-weight: 600;
+    font-family: "Red Hat Display";
 }
 
 .logo {
@@ -107,7 +108,7 @@ nav {
 .object {
     position: absolute;
     right: -1000px;
-    bottom: 5%;
+    bottom: 14%;
     width: 65rem;
     transition: right 1s ease-in-out;
     z-index: 3;
@@ -117,21 +118,63 @@ nav {
     -webkit-user-select: none;
     -ms-user-select: none;
 }
-/* 
+
+.object-shape {
+    width: 40rem;
+    height: 30rem;
+    transition: right 1s ease-in-out;
+    position: absolute;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% ;
+    background: #b6080b;
+    bottom: 12%;
+    z-index: 2;
+}
+
 .grid-shape {
-    background:repeating-linear-gradient(90deg, #FFFFFF 0, #FFFFFF 5%, transparent 0, transparent 50%) 0% 0% / 3em 3em, repeating-linear-gradient(180deg, #FFFFFF 0, #FFFFFF 5%, transparent 0, transparent 50%) 0% 0% / 3em 3em #FFFFFF;
-    opacity:0.4;
-    background-size: 58px 58px;
-    z-index: 10;
-} */
+    /* background-size: 40px 40px;
+    background-image:
+    linear-gradient(to right, grey 1px, transparent 1px),
+    linear-gradient(to bottom, grey 1px, transparent 1px); */
+    /* background:
+    linear-gradient(-90deg, rgba(0,0,0,.05) 1px, transparent 1px),
+    linear-gradient(rgba(0,0,0,.05) 1px, transparent 1px), 
+    linear-gradient(-90deg, rgba(0, 0, 0, .04) 1px, transparent 1px),
+    linear-gradient(rgba(0,0,0,.04) 1px, transparent 1px),
+    linear-gradient(transparent 3px, #f2f2f2 3px, #f2f2f2 78px, transparent 78px),
+    linear-gradient(-90deg, #aaa 1px, transparent 1px),
+    linear-gradient(-90deg, transparent 3px, #f2f2f2 3px, #f2f2f2 78px, transparent 78px),
+    linear-gradient(#aaa 1px, transparent 1px),
+    #f2f2f2;
+    background-size:
+    4px 4px,
+    4px 4px,
+    80px 80px,
+    80px 80px,
+    80px 80px,
+    80px 80px,
+    80px 80px,
+    80px 80px; */
+    background-size: 40px 40px;
+    background-image: radial-gradient(circle, #ffffff 1px, rgba(255, 255, 255, 0) 1px);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+} 
 
 .slide-in {
-    right: 8%;
+    right: 5%;
     transform: translateX(8%);
 }
 
 .slide-out {
     right: -1300px;
+}
+
+.size-pd-car {
+    width: 55rem;
+    height: auto;
+    margin-right: -4rem;
+    
 }
 
 .content {
@@ -152,35 +195,52 @@ nav {
 
 .title {
     font-size: 4em;
-    font-family: 'Rubik Glitch', sans-serif;
+    text-align: left;
+    font-family: 'Red Hat Display', sans-serif;
     -webkit-text-stroke: 0.5px white;
+    font-weight: 1000;
     -webkit-text-fill-color: transparent;
-    margin: 0 0 -1rem 0;
+    margin: 0 0 -1.5rem 0;
+    letter-spacing: 5px;
 }
 
 .title-section-2 {
-    font-family: 'Rubik Glitch', sans-serif;
+    text-align: left;
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 1000;
     font-size: 6em;
-    color: #ff0000;
-    margin: 0;
+    color: #b6080b;
+    margin: 0 0 -1rem 0;
+    letter-spacing: 5px;
 }
 
 .description {
     font-size: 1.1em;
-    margin: 1rem 0 0 0;
-    font-family: "Rubik One", sans-serif;
+    font-family: "Red Hat Display", sans-serif;
+    font-weight: 800;
+    
+}
+
+.description-section-2 {
+    font-size: 1em;
+    font-family: "Red Hat Display", sans-serif;
+    font-weight: 800;
+
 }
 
 .discord-button {
-    background-color: #ff0000;
+    background-color: #b6080b;
     border: none;
     padding: 15px 25px;
     color: white;
     font-size: 1em;
     cursor: pointer;
-    margin-top: 2rem;
-    font-family: "Rubik One", sans-serif;
+    margin-top: 0.4rem;
+    font-family: "Red Hat Display", sans-serif;
+    font-weight: 800;
     border-radius: 10px;
+    width: 12rem;
+    height: auto;
 }
 
 .discord-button:hover {
@@ -201,6 +261,43 @@ nav {
     animation: backgroundExit 1s forwards;
 }
 
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+
+.footer-container {
+    width: 80%;
+    border-radius: 50px;
+    margin-bottom: 2rem;
+    background: rgba(255, 255, 255, .1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .4);
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-size: clamp(0.9rem, 2.5vw, 1.2em);
+    font-weight: 600;
+    font-family: "Red Hat Display";
+}
+
 @keyframes backgroundEnter {
     from {
         opacity: 0;
@@ -217,4 +314,141 @@ nav {
     to {
         opacity: 0;
     }
+}
+
+@media (min-width: 1203px) and (max-width: 1600px){
+    /*Tablets [601px -> 1200px]*/
+    .object {
+        width: 35rem;
+        bottom: 30%;
+
+    }
+    .object-shape {
+        width: 25rem;
+        height: 20rem;
+        bottom: 28%;
+    }
+
+    .title {
+        font-size: clamp(2rem, 6vw, 4rem);
+        justify-content: start;
+        text-align: start;
+    }
+
+    .title-section-2 {
+        font-size: clamp(2rem, 6vw, 6rem);
+        margin-bottom: 0.2rem;
+        text-align: start;
+    }
+
+    .desc-group {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        margin-right: 30rem;
+        
+    }
+    
+    .description {
+        font-size: clamp(0.2rem, 4vw, 1.1em);
+        margin-bottom: -1rem;
+    }
+
+
+}
+
+@media only screen and (max-width: 1203px){
+	/*Small smartphones [325px -> 425px]*/
+
+    nav {
+        width: 70%;
+    }
+    
+    .navbar-container {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar-container > p {
+        display: none;
+    }
+
+    .main-container {
+        align-items: start;
+        justify-content: center;
+    }
+
+    .content {
+        margin: 10rem 2rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .title {
+        font-size: clamp(1rem, 6vw, 4rem);
+        margin-bottom: 0.2rem;
+        justify-content: start;
+        text-align: center;
+    }
+
+    .title-section-2 {
+        font-size: clamp(2rem, 6vw, 8rem);
+        margin-bottom: 0.2rem;
+        text-align: center;
+    }
+
+    .desc-group {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .discord-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 10rem;
+        width: 100%;
+        height: 2.6rem;
+        font-size: clamp(0.7rem, 2.5vw, 0.8em);
+    }
+
+    .description {
+        font-size: clamp(0.9rem, 2.5vw, 1em);
+        text-align: center;
+        margin-bottom: -1rem;
+        margin-right: 0;
+    }
+
+    .object {
+        width: 20rem;
+        bottom: 20%;
+
+    }
+    .object-shape {
+        width: 16rem;
+        height: 12rem;
+        bottom: 18%;
+    }
+
+    .footer-content {
+        width: 70%;
+    }
+
+    .size-pd-car {
+        margin-right: -1rem;
+    }
+
+    .slide-in {
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    .slide-out {
+        right: -100%;
+    }
+
+
 }

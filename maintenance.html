@@ -15,6 +15,7 @@
     <link href="https://fonts.googleapis.com/css?family=Rubik One" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap" rel="stylesheet">    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Rubik+Glitch&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 
     <!-- Favicon -->
     <link rel="icon" href="./assets/favicon/favicon.ico" type="image/png">
@@ -55,10 +56,12 @@
   <body>
     <section class="main-container">
       <div class="background-overlay"></div>
+        <div class="grid-shape"></div>
       <div class="background-layer" id="bg1"></div>
       <div class="background-layer" id="bg2"></div>
-      <div>
-        <img draggable="false" id="object" class="object" src="" alt="">
+      <div class="object-group">
+        <img draggable="false" id="object" class="object" src="" alt="Vehicles based on different background themes">
+        <div id="object-shape" class="object-shape"></div>
       </div>
       
       <div class="content">
@@ -66,11 +69,18 @@
           <h1 class="title">Site is under</h1>
           <h1 class="title-section-2" id="title">Construction</h1>
         </div>
-        <div>
-          <p class="description">We are working hard to bring you the best experience!</p>
+        <div class="desc-group">
+          <p class="description">We are working hard to bring you the best experience! Meanwhile, join our Discord community!</p>
+          <p class="description-section-2"></p>
           <button class="discord-button" onclick="location.href='https://discord.gg/dXvuGpSrRr'">Discord Server <i class="fa-solid fa-chevron-right"></i></button>
         </div>
       </div>
     </section>
   </body>
+  <footer>
+    <div class="footer-container">
+      <div class="footer-content">
+        <p class="footer-text">© 2024 Centurion Network. All rights reserved.</p>
+      </div>
+    </div>
 </html>
