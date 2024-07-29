@@ -353,7 +353,7 @@ footer {
 }
 
 @media only screen and (max-width: 1203px){
-	/*Small smartphones [325px -> 425px]*/
+	/*Small smartphones to medium tablets [325px -> 1203px]*/
 
     nav {
         width: 70%;
@@ -374,7 +374,7 @@ footer {
     }
 
     .content {
-        margin: 14rem 2rem;
+        margin: 19rem 2rem;
         justify-content: center;
         align-items: center;
     }
@@ -419,12 +419,14 @@ footer {
     .object {
         width: 20rem;
         bottom: 26%;
+        display: none;
 
     }
     .object-shape {
         width: 16rem;
         height: 12rem;
         bottom: 24%;
+        display: none;
     }
 
     .footer-content {
